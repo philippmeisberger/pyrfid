@@ -2,9 +2,8 @@ Package: python-rfid
 Version: 1.0
 Section: devel
 Priority: extra
-Depends: python (>= 2.7), python-serial
-Suggests: pamrfid
-Replaces: python-rfid
+Depends: python (>= 2.7), python-serial, python-rfid
+Recommends: pamrfid
 Architecture: all
 Installed-Size: 10
 Maintainer: Philipp Meisberger <team@pm-codeworks.de>
