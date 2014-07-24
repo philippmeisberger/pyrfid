@@ -1,7 +1,7 @@
 """
 PyRfid v1.0
 
-A python written library for an 125kHz RFID reader.
+A python written library for an 125kHz RFID reader using the EM4100 protocol.
 
 Important: PySerial is required to use this library!
 ~# apt-get install python-serial
@@ -21,7 +21,7 @@ import utilities
 
 class PyRfid(object):
     """
-    A python written library for an 125kHz RFID reader.
+    A python written library for an 125kHz RFID reader using the EM4100 protocol.
 
     Flag for RFID connection start.
     @var hex RFID_STARTCODE
@@ -153,9 +153,9 @@ class PyRfid(object):
     @property
     def tagType(self):
         """
-        Returns type of read tag (first 2 bytes).
+        Returns type of read tag (first 4 bytes).
         
-        @return hex (2 bytes)
+        @return hex (4 bytes)
         """
         
         if ( self.__rawTag != None ):
@@ -164,11 +164,11 @@ class PyRfid(object):
         return None
                 
     @property
-    def tagTypeDecimal(self):
+    def tagTypeFloat(self):
         """
-        Returns type of read tag (first byte).
+        Returns type of read tag (first 2 bytes).
         
-        @return hex (1 bytes)
+        @return hex (2 bytes)
         """
         
         if ( self.__rawTag != None ):
@@ -181,7 +181,7 @@ class PyRfid(object):
         """
         Returns ID of read tag in decimal format "0001234567".
         
-        @return string (10 bytes)
+        @return string (10 chars)
         """
 
         if ( self.__rawTag != None ):
@@ -192,11 +192,11 @@ class PyRfid(object):
         return None
 
     @property
-    def tagIdDecimal(self):
+    def tagIdFloat(self):
         """
-        Returns ID of read tag in decimal format "123,45678".
+        Returns ID of read tag in float format "123,45678".
         
-        @return string (9 bytes)
+        @return string (9 chars)
         """
 
         if ( self.__rawTag != None ):
@@ -210,9 +210,9 @@ class PyRfid(object):
     @property
     def tagChecksum(self):
         """
-        Returns checksum of read tag (last byte).
+        Returns checksum of read tag (last 2 bytes).
         
-        @return hex (1 bytes)
+        @return hex (2 bytes)
         """
         
         if ( self.__rawTag != None ):

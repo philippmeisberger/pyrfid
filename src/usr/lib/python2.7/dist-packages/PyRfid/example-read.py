@@ -27,9 +27,9 @@ try:
     print 'ID:       '+ rfid.tagId
     print 'Type:     '+ rfid.tagType +'\n'
 
-    print 'Decimal-format:'
-    print 'ID:       '+ rfid.tagIdDecimal
-    print 'Type:     '+ rfid.tagTypeDecimal
+    print 'Float-format:'
+    print 'ID:       '+ rfid.tagIdFloat
+    print 'Type:     '+ rfid.tagTypeFloat
 
 except Exception as e:
     sys.err.write('[Exception] '+ e.message)
