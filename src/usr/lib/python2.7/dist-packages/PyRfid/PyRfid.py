@@ -200,10 +200,10 @@ class PyRfid(object):
         """
 
         if ( self.__rawTag != None ):
-            pre = int(self.__rawTag[2:6], 16)
-            post = int(self.__rawTag[6:10], 16)
-            tagId = str(pre) +'.'+ str(post)            
-            return '%3.5f' % float(tagId)
+            tagHex = int(self.__rawTag[2:10], 16)
+            tagId = float(tagHex)
+            tagId = tagId / 100000
+            return str(tagId)
 
         return None
             
