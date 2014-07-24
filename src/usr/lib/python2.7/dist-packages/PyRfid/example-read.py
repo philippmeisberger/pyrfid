@@ -32,4 +32,4 @@ try:
     print 'Type:     '+ rfid.tagTypeFloat
 
 except Exception as e:
-    sys.err.write('[Exception] '+ e.message)
+    sys.stderr.write('[Exception] '+ e.message + '\n')
