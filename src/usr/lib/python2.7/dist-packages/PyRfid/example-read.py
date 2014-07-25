@@ -23,7 +23,7 @@ try:
     print 'RAW:      '+ rfid.rawTag
     print 'Checksum: '+ rfid.tagChecksum +'\n'
 
-    print 'Hexadecimal-format:'
+    print 'Decimal-format:'
     print 'ID:       '+ rfid.tagId
     print 'Type:     '+ rfid.tagType +'\n'
 

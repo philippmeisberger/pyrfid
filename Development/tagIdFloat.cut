@@ -1,0 +1,4 @@
+            #tagHex = int(self.__rawTag[2:10], 16)
+            #tagId = float(tagHex)
+            #tagId = tagId / 100000
+            #str(tagId)
