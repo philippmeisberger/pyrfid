@@ -1,10 +1,5 @@
 #!/bin/sh
 
-if ( test "$USER" != "root" ); then
-  echo "This script must be executed as root!"
-  exit 1
-fi
-
 PACKAGE=python-rfid
 DIR=src
 
