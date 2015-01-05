@@ -2,15 +2,13 @@ Source: python-rfid
 Maintainer: Philipp Meisberger <team@pm-codeworks.de>
 Section: python
 Priority: optional
-Standards-Version: 1.0
-Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.4
+Build-Depends: debhelper (>= 9), python (>= 2.7), python-setuptools
 
 Package: python-rfid
-Depends: python (>= 2.7), python-serial
+Depends: python (>= 2.7), python-serial, ${python:Depends}, ${misc:Depends}
 Suggests: pamrfid
 Architecture: all
 Homepage: http://www.pm-codeworks.de/pyrfid.html
 Description: Python written library for an 125kHz RFID reader
  Developed under the RDM6300 RFID-sensor. Other readers could be possible but they must use the EM4100 protocol.
- .
- This package is designed to work with Python 2.7 only!

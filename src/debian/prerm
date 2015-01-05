@@ -1,6 +1,0 @@
-#!/bin/sh
-
-## Deletes compiled Python files before removing package
-find /usr/lib/python2.7/dist-packages/PyRfid/ -type f -name *.pyc -exec rm {} \;
-
-exit "${?}"
