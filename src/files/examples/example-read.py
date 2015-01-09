@@ -2,16 +2,15 @@
 # -*- coding: utf-8 -*-
 
 """
-PyRfid v1.0
+PyRfid v1.1
 
 Example RFID read.
 
-Copyright 2014 Philipp Meisberger (PM Code Works).
+Copyright 2015 Philipp Meisberger (PM Code Works).
 All rights reserved.
 """
 
-import PyRfid.PyRfid as PyRfid
-import sys
+from pyrfid.PyRfid import PyRfid
 
 rfid = PyRfid('/dev/ttyUSB0', 9600)
 
@@ -33,4 +32,4 @@ try:
     print 'Type:     '+ rfid.tagTypeFloat
 
 except Exception as e:
-    sys.stderr.write('[Exception] '+ e.message + '\n')
+    print('[Exception] '+ str(e))
