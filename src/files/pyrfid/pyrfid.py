@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Python RFID v1.0
+Python RFID v1.1
 
 A python written library for an 125kHz RFID reader using the EM4100 protocol.
 
