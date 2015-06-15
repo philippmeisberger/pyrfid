@@ -9,7 +9,7 @@ setup(
     author          = 'Philipp Meisberger',
     author_email    = 'team@pm-codeworks.de',
     url             = 'http://www.pm-codeworks.de/pyrfid.html',
-    license         = 'BSD 3 License',
+    license         = 'D-FSL',
     package_dir     = {'': 'files'},
     packages        = ['pyrfid'],
 )
