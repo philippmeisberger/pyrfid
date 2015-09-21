@@ -10,7 +10,7 @@ Copyright 2015 Philipp Meisberger (PM Code Works).
 All rights reserved.
 """
 
-from pyrfid.PyRfid import PyRfid
+from pyrfid.pyrfid import PyRfid
 
 rfid = PyRfid('/dev/ttyUSB0', 9600)
 
