@@ -12,7 +12,7 @@ Add PM Codeworks repository
 
 Add PM Codeworks key
 
-    ~# wget -O - http://apt.pm-codeworks.de/pm-codeworks.de.gpg.key | apt-key add -
+    ~# wget -O - http://apt.pm-codeworks.de/pm-codeworks.de.gpg | apt-key add -
     ~# apt-get update
 
 Install the packages
