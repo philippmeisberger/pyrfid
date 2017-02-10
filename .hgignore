@@ -1,0 +1,10 @@
+## Uses glob syntax, regex sucks ;)
+syntax: glob
+**.pyc
+
+## Debian package files
+**.dsc
+**.xz
+**.deb
+**.build
+**.changes
