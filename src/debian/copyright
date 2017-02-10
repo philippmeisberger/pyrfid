@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Python RFID
 Upstream-Contact: Philipp Meisberger <team@pm-codeworks.de>
-Source: http://apt.pm-codeworks.de/pool/main/p/python-rfid/python-rfid_1.0.tar.gz
+Source: https://github.com/philippmeisberger/pyrfid
 
 Files: *
 Copyright: Copyright (C) 2015 Philipp Meisberger <team@pm-codeworks.de>
