@@ -11,8 +11,7 @@ All rights reserved.
 
 import serial
 import os
-from .utilities import *
-
+import struct
 
 class PyRfid(object):
     """
@@ -84,7 +83,7 @@ class PyRfid(object):
 
                 ## Start and stop bytes are string encoded and must be byte encoded
                 if ( ( index == 0 ) or ( index == 13 ) ):
-                    receivedFragment = utilities.stringToByte(receivedFragment)
+                    receivedFragment = struct.unpack('@B', receivedFragment)[0]
                 else:
                     rawTag += receivedFragment
                     receivedFragment = int(receivedFragment, 16)
@@ -102,13 +101,13 @@ class PyRfid(object):
 
                 ## Calculates packet checksum
                 for i in range(1, 11, 2):
-                    byte = utilities.leftShift(receivedPacketData[i], 4)
-                    byte = byte | utilities.leftShift(receivedPacketData[i+1], 0)
+                    byte = receivedPacketData[i] << 4
+                    byte = byte | receivedPacketData[i+1]
                     calculatedChecksum = calculatedChecksum ^ byte
 
                 ## Gets received packet checksum
-                receivedChecksum = utilities.leftShift(receivedPacketData[11], 4)
-                receivedChecksum = receivedChecksum | utilities.leftShift(receivedPacketData[12], 0)
+                receivedChecksum = receivedPacketData[11] << 4
+                receivedChecksum = receivedChecksum | receivedPacketData[12]
 
                 ## Checks for wrong checksum
                 if ( calculatedChecksum != receivedChecksum ):
