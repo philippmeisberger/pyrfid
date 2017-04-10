@@ -3,11 +3,10 @@
 
 """
 PyFingerprint
+Copyright (C) 2015 Bastian Raschke <bastian.raschke@posteo.de>
+All rights reserved.
 
-@author Bastian Raschke <bastian.raschke@posteo.de>
-@copyright Bastian Raschke
-@license LGPL (GNU Lesser General Public License)
-@link https://sicherheitskritisch.de
+@author: Bastian Raschke <bastian.raschke@posteo.de>
 """
 
 import struct

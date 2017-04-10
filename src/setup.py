@@ -1,10 +1,11 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(
-    name            = 'python-rfid',
-    version         = '1.1',
+    name            = 'PyRfid',
+    version         = '1.2',
     description     = 'Python written library for an 125kHz RFID reader',
     author          = 'Philipp Meisberger',
     author_email    = 'team@pm-codeworks.de',

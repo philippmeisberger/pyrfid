@@ -2,24 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
-Python RFID v1.1
+PyRfid
+Copyright (C) 2015 Philipp Meisberger <team@pm-codeworks.de>
+All rights reserved.
 
-A python written library for an 125kHz RFID reader using the EM4100 protocol.
-
-Important: PySerial is required to use this library!
-~# apt-get install python-serial
-
-@see http://www.instructables.com/id/A-Universal-RFID-Key/step2/Whats-stored-on-the-card/
-
-@author Philipp Meisberger <team@pm-codeworks.de>
-@copyright Philipp Meisberger (PM Code Works)
-@license D-FSL (http://www.dipp.nrw.de/d-fsl/lizenzen/en/D-FSL-1_0_en.txt)
-@link http://www.pm-codeworks.de/pyrfid.html
+@author: Philipp Meisberger <team@pm-codeworks.de>
 """
 
 import serial
 import os
-import utilities
+from .utilities import *
 
 
 class PyRfid(object):

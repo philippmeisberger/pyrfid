@@ -2,15 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-Python RFID
-@author Philipp Meisberger <team@pm-codeworks.de>
-
-Copyright 2015 Philipp Meisberger
+PyRfid
+Copyright (C) 2015 Philipp Meisberger <team@pm-codeworks.de>
 All rights reserved.
+
+@author: Philipp Meisberger <team@pm-codeworks.de>
 """
 
-__version__ = '1.1'
-__copyright__ = 'Philipp Meisberger'
-__organization__ = 'PM Code Works'
-__license__ = 'BSD 3 License'
-__authors__ = ['Philipp Meisberger']
+__version__ = '1.2'

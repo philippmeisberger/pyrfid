@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-PyRfid v1.1
-
-Example RFID read.
-
-Copyright 2015 Philipp Meisberger (PM Code Works).
+PyRfid
+Copyright (C) 2015 Philipp Meisberger <team@pm-codeworks.de>
 All rights reserved.
+
+@author: Philipp Meisberger <team@pm-codeworks.de>
 """
 
 from pyrfid.pyrfid import PyRfid
@@ -33,3 +32,4 @@ try:
 
 except Exception as e:
     print('[Exception] '+ str(e))
+    exit(1)
