@@ -15,7 +15,13 @@ Add PM Codeworks key
     ~# wget -O - http://apt.pm-codeworks.de/pm-codeworks.de.gpg | apt-key add -
     ~# apt-get update
 
-Install the packages
+The library supports Python 2 and Python 3. There are one Debian package for each. It's up to you which version you install.
+
+For Python 3 use:
+
+    ~# apt-get install python3-rfid
+
+For Python 2 use:
 
     ~# apt-get install python-rfid
 
