@@ -5,7 +5,7 @@
 
 override_dh_auto_clean:
 	dh_auto_clean
-	rm -rf ./build/ ./files/PyRfid.egg-info/
+	rm -rf ./build/ ./files/*.egg-info/
 
 override_dh_auto_build:
 	dh_auto_build
