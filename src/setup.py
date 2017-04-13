@@ -4,7 +4,7 @@
 from setuptools import setup
 
 setup(
-    name            = 'PyRfid',
+    name            = 'pyrfid',
     version         = '1.2',
     description     = 'Python written library for an 125kHz RFID reader',
     author          = 'Philipp Meisberger',
