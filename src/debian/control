@@ -13,7 +13,7 @@ Package: python-rfid
 Depends: ${python:Depends}, ${misc:Depends}, python-serial
 Suggests: libpam-rfid
 Architecture: all
-Description: Python written library for an 125kHz RFID reader
+Description: Python 2 written library for an 125kHz RFID reader
  Developed under the RDM6300 RFID-sensor. Other readers could be possible but
  they must be compatible with the EM4100 protocol.
 
@@ -21,6 +21,6 @@ Package: python3-rfid
 Depends: ${python3:Depends}, ${misc:Depends}, python3-serial
 Suggests: libpam-rfid
 Architecture: all
-Description: Python written library for an 125kHz RFID reader (Python3)
+Description: Python 3 written library for an 125kHz RFID reader
  Developed under the RDM6300 RFID-sensor. Other readers could be possible but
  they must be compatible with the EM4100 protocol.

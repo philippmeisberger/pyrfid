@@ -29,7 +29,7 @@ How to use the library
 
 Read a tag
 
-    ~$ python2 /usr/share/doc/python-rfid/examples/example_read.py
+    ~$ python /usr/share/doc/python-rfid/examples/example_read.py
 
 
 Questions and suggestions
