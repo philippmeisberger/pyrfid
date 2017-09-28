@@ -8,11 +8,17 @@ Installation
 
 Add PM Codeworks repository
 
-    ~# wget http://apt.pm-codeworks.de/pm-codeworks.list -P /etc/apt/sources.d/
+* Debian 8:
+
+    `~# echo "deb http://apt.pm-codeworks.de jessie main" | tee /etc/apt/sources.list.d/pm-codeworks.list`
+
+* Debian 9:
+
+    `~# echo "deb http://apt.pm-codeworks.de stretch main" | tee /etc/apt/sources.list.d/pm-codeworks.list`
 
 Add PM Codeworks key
 
-    ~# wget -O - http://apt.pm-codeworks.de/pm-codeworks.de.gpg | apt-key add -
+    ~# wget -qO - http://apt.pm-codeworks.de/pm-codeworks.de.gpg | apt-key add -
     ~# apt-get update
 
 The library supports Python 2 and Python 3. There are one Debian package for each. It's up to you which version you install.
