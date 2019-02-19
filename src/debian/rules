@@ -1,12 +1,14 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --with python2,python3
+	dh $@ --with python2,python3,sphinxdoc
 
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -rf ./build/ ./files/*.egg-info/
 
+override_dh_auto_build: export http_proxy=127.0.0.1:9
+override_dh_auto_build: export https_proxy=127.0.0.1:9
 override_dh_auto_build:
 	dh_auto_build
 	set -ex; for python in $(shell py3versions -r); do \
@@ -15,12 +17,6 @@ override_dh_auto_build:
 
 	## Build API documentation
 	sphinx-build -b html ../doc ./build/html
-
-	## Fix Lintian warnings
-	rm ./build/html/_static/jquery.js
-	ln -s /usr/share/javascript/jquery/jquery.js ./build/html/_static/jquery.js
-	rm ./build/html/_static/underscore.js
-	ln -s /usr/share/javascript/underscore/underscore.js ./build/html/_static/underscore.js
 
 override_dh_auto_install:
 	dh_auto_install

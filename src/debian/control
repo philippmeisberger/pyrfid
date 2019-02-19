@@ -28,7 +28,7 @@ Description: Python 3 written library for an 125kHz RFID reader
 Package: python-rfid-doc
 Section: doc
 Architecture: all
-Depends: ${misc:Depends}, libjs-jquery, libjs-underscore
+Depends: ${sphinxdoc:Depends}, ${misc:Depends}
 Recommends: python-rfid | python3-rfid
 Description: API Documentation for PyRfid
  Python 2 and 3 written library for 125kHz RFID readers. This package
