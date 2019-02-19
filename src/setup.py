@@ -3,9 +3,14 @@
 
 from setuptools import setup
 
+import sys
+sys.path.insert(0, './files/')
+
+import pyrfid
+
 setup(
     name            = 'pyrfid',
-    version         = '1.2',
+    version         = pyrfid.__version__,
     description     = 'Python written library for an 125kHz RFID reader',
     author          = 'Philipp Meisberger',
     author_email    = 'team@pm-codeworks.de',
