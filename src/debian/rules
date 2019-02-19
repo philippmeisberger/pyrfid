@@ -13,6 +13,15 @@ override_dh_auto_build:
 		$$python setup.py build; \
 	done;
 
+	## Build API documentation
+	sphinx-build -b html ../doc ./build/html
+
+	## Fix Lintian warnings
+	rm ./build/html/_static/jquery.js
+	ln -s /usr/share/javascript/jquery/jquery.js ./build/html/_static/jquery.js
+	rm ./build/html/_static/underscore.js
+	ln -s /usr/share/javascript/underscore/underscore.js ./build/html/_static/underscore.js
+
 override_dh_auto_install:
 	dh_auto_install
 	set -ex; for python in $(shell py3versions -r); do \

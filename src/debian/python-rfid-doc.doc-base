@@ -1,0 +1,9 @@
+Document: python-rfid-api
+Title: PyRfid API
+Author: Philipp Meisberger <team@pm-codeworks.de>
+Abstract: PyRfid API documentation
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/python-rfid-doc/html/PyRfid.html
+Files: /usr/share/doc/python-rfid-doc/html/*.html
