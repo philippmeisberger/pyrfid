@@ -11,7 +11,7 @@ Homepage: http://www.pm-codeworks.de/pyrfid.html
 
 Package: python-rfid
 Depends: ${python:Depends}, ${misc:Depends}, python-serial
-Suggests: libpam-rfid
+Suggests: python-rfid-doc
 Architecture: all
 Description: Python 2 written library for an 125kHz RFID reader
  Developed under the RDM6300 RFID-sensor. Other readers could be possible but
@@ -19,7 +19,7 @@ Description: Python 2 written library for an 125kHz RFID reader
 
 Package: python3-rfid
 Depends: ${python3:Depends}, ${misc:Depends}, python3-serial
-Suggests: libpam-rfid
+Suggests: python-rfid-doc
 Architecture: all
 Description: Python 3 written library for an 125kHz RFID reader
  Developed under the RDM6300 RFID-sensor. Other readers could be possible but
