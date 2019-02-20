@@ -1,7 +1,7 @@
 Source: python-rfid
 Maintainer: Philipp Meisberger <team@pm-codeworks.de>
 Section: python
-Priority: extra
+Priority: optional
 Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 9), dh-python, python (>= 2.7), python3 (>= 3.2), python-setuptools, python3-setuptools, python-sphinx | python3-sphinx
 X-Python-Version: all
