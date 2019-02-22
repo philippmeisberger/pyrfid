@@ -7,6 +7,7 @@ Build-Depends: debhelper (>= 9), dh-python, python (>= 2.7), python3 (>= 3.2), p
 XS-Python-Version: all
 X-Python3-Version: >= 3.2
 Vcs-Git: https://github.com/philippmeisberger/pyrfid.git
+Vcs-Browser: https://github.com/philippmeisberger/pyrfid
 Homepage: http://www.pm-codeworks.de/pyrfid.html
 
 Package: python-rfid
