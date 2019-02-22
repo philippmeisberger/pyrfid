@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Python RFID
 Upstream-Contact: Philipp Meisberger <team@pm-codeworks.de>
 Source: https://github.com/philippmeisberger/pyrfid
