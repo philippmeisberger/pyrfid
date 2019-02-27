@@ -1,20 +1,10 @@
 #!/usr/bin/make -f
 
+export PYBUILD_NAME=rfid
+
 %:
-	dh $@ --with python2,python3
+	dh $@ --with python2,python3 --buildsystem=pybuild
 
 override_dh_auto_clean:
 	dh_auto_clean
 	rm -rf ./build/ ./files/*.egg-info/
-
-override_dh_auto_build:
-	dh_auto_build
-	set -ex; for python in $(shell py3versions -r); do \
-		$$python setup.py build; \
-	done;
-
-override_dh_auto_install:
-	dh_auto_install
-	set -ex; for python in $(shell py3versions -r); do \
-		$$python setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb; \
-	done;
