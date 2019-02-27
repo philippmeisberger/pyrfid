@@ -2,7 +2,7 @@ Source: python-rfid
 Maintainer: Philipp Meisberger <team@pm-codeworks.de>
 Section: python
 Priority: optional
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 9), dh-python, python (>= 2.7), python3 (>= 3.2), python-setuptools, python3-setuptools
 XS-Python-Version: all
 X-Python3-Version: >= 3.2
