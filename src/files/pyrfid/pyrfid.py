@@ -14,19 +14,7 @@ import struct
 
 class PyRfid(object):
     """
-    A python written library for an 125kHz RFID reader using the EM4100 protocol.
-
-    Flag for RFID connection start.
-    @var hex RFID_STARTCODE
-
-    Flag for RFID connection end.
-    @var hex RFID_ENDCODE
-
-    UART serial connection via PySerial.
-    @var Serial __serial
-
-    Holds the complete tag after reading.
-    @var string __rawTag
+    Manages 125kHz RFID readers.
     """
 
     RFID_STARTCODE = 0x02
@@ -35,11 +23,15 @@ class PyRfid(object):
     __rawTag = None
 
     def __init__(self, port = '/dev/ttyUSB0', baudRate = 9600):
-        """
-        Constructor
+        # type: (...) -> None
+        """Constructor for creating a PyRfid instance.
 
-        @param string port
-        @param integer baudRate
+        Arguments:
+            port (str): The port to use
+            baudRate (int): The baud-rate to use. Must be a multiple of 9600!
+            address (int): The sensor address
+            password (int): The sensor password
+
         """
 
         ## Validates port
@@ -61,9 +53,10 @@ class PyRfid(object):
 
     def __read(self):
         """
-        Reads the complete tag and returns status.
+        Reads the complete tag and returns the status.
 
-        @return boolean
+        Returns:
+            True if successful or False otherwise.
         """
 
         self.__rawTag = None
@@ -117,11 +110,14 @@ class PyRfid(object):
 
                 return True
 
+        return False
+
     def readTag(self):
         """
-        Reads the complete raw tag.
+        Reads the complete tag.
 
-        @return boolean
+        Returns:
+            True if successful or False otherwise.
         """
 
         try:
@@ -136,9 +132,10 @@ class PyRfid(object):
     @property
     def rawTag(self):
         """
-        Returns read raw tag in hexadecimal format "1A2B345C67" without checksum.
+        Gets the raw tag in hex format "1A2B345C67" without checksum.
 
-        @return string (10 bytes)
+        Returns:
+            The raw tag (10 bytes)
         """
 
         return self.__rawTag[0:10]
@@ -146,9 +143,10 @@ class PyRfid(object):
     @property
     def tagType(self):
         """
-        Returns type of read tag (first 4 bytes).
+        Gets the type of read tag in hex format (first 4 bytes).
 
-        @return hex (4 bytes)
+        Returns:
+            The tag type
         """
 
         if ( self.__rawTag != None ):
@@ -159,9 +157,10 @@ class PyRfid(object):
     @property
     def tagTypeFloat(self):
         """
-        Returns type of read tag (first 2 bytes).
+        Gets the float type of read tag in hex format (first 2 bytes).
 
-        @return hex (2 bytes)
+        Returns:
+            The tag type
         """
 
         if ( self.__rawTag != None ):
@@ -172,9 +171,10 @@ class PyRfid(object):
     @property
     def tagId(self):
         """
-        Returns ID of read tag in decimal format "0001234567".
+        Gets the tag ID in decimal format, e.g. "0001234567".
 
-        @return string (10 chars)
+        Returns:
+            The ID
         """
 
         if ( self.__rawTag != None ):
@@ -187,9 +187,10 @@ class PyRfid(object):
     @property
     def tagIdFloat(self):
         """
-        Returns ID of read tag in float format "123,45678".
+        Gets the tag ID in float format, e.g. "123,45678".
 
-        @return string (9 chars)
+        Returns:
+            The ID
         """
 
         if ( self.__rawTag != None ):
@@ -203,9 +204,10 @@ class PyRfid(object):
     @property
     def tagChecksum(self):
         """
-        Returns checksum of read tag (last 2 bytes).
+        Gets the checksum of read tag (last 2 bytes).
 
-        @return hex (2 bytes)
+        Returns:
+            The checksum
         """
 
         if ( self.__rawTag != None ):
