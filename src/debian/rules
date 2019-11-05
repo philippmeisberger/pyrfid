@@ -15,5 +15,4 @@ override_dh_auto_build:
 	dh_auto_build
 
 	## Build API documentation
-	sphinx-build -b html ../docs ./build/html
-
+	sphinx-build -b singlehtml ../docs ./build/html
