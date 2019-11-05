@@ -55,6 +55,9 @@ class PyRfid(object):
 
         Returns:
             True if successful or False otherwise.
+
+        Raises:
+            Exception: if any error occurs
         """
 
         self.__rawTag = None
@@ -116,6 +119,9 @@ class PyRfid(object):
 
         Returns:
             True if successful or False otherwise.
+
+        Raises:
+            Exception: if any error occurs
         """
 
         try:
