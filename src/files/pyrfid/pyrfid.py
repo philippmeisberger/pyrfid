@@ -23,14 +23,12 @@ class PyRfid(object):
     __rawTag = None
 
     def __init__(self, port = '/dev/ttyUSB0', baudRate = 9600):
-        # type: (...) -> None
-        """Constructor for creating a PyRfid instance.
+        """
+        Constructor for creating a PyRfid instance.
 
         Arguments:
             port (str): The port to use
             baudRate (int): The baud-rate to use. Must be a multiple of 9600!
-            address (int): The sensor address
-            password (int): The sensor password
 
         """
 
