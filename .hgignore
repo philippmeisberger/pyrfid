@@ -1,6 +1,6 @@
-## Uses glob syntax, regex sucks ;)
 syntax: glob
 **.pyc
+_build
 
 ## Debian package files
 **.dsc
