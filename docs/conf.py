@@ -22,4 +22,5 @@ extensions = [
     'sphinx.ext.napoleon',
 ]
 autoclass_content = "both"
+autodoc_mock_imports = ["serial"]
 html_theme = "sphinx_rtd_theme"
