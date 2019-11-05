@@ -9,7 +9,6 @@ All rights reserved.
 """
 
 import serial
-import os
 import struct
 
 class PyRfid(object):
@@ -28,15 +27,9 @@ class PyRfid(object):
 
         Arguments:
             port (str): The port to use
-            baudRate (int): The baud-rate to use. Must be a multiple of 9600!
-
+            baudRate (int): The baud-rate to use
         """
 
-        ## Validates port
-        if ( os.path.exists(port) == False ):
-            raise Exception('The RFID sensor port "' + port + '" was not found!')
-
-        ## Initializes connection
         self.__serial = serial.Serial(port = port, baudrate = baudRate, bytesize = serial.EIGHTBITS, timeout = 1)
 
     def __del__(self):
