@@ -6,8 +6,6 @@ from setuptools import setup
 import sys
 sys.path.insert(0, './files/')
 
-requirements = open("requirements.txt", "r").read().split("\n")
-
 import pyrfid
 
 setup(
@@ -21,7 +19,7 @@ setup(
     license         = 'D-FSL',
     package_dir     = {'': 'files'},
     packages        = ['pyrfid'],
-    install_requires= requirements,
+    install_requires = ['pyserial'],
     classifiers     = [
         'Development Status :: 5 - Production/Stable'
         'Intended Audience :: Developers',
