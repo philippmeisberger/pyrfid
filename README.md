@@ -1,6 +1,8 @@
 PyRfid
 ======
 
+[![Documentation Status](https://readthedocs.org/projects/pyrfid/badge/?version=latest)](https://pyrfid.readthedocs.io/en/latest/?badge=latest)
+
 PyRfid is a Python written library for an 125kHz RFID reader. It was developed with the RDM6300 RFID-sensor which uses the EM4100 protocol.
 
 Installation
