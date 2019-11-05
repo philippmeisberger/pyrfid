@@ -5,5 +5,5 @@ Abstract: PyRfid API documentation
 Section: Programming
 
 Format: HTML
-Index: /usr/share/doc/python-rfid-doc/html/PyRfid.html
+Index: /usr/share/doc/python-rfid-doc/html/index.html
 Files: /usr/share/doc/python-rfid-doc/html/*.html

@@ -8,7 +8,7 @@ sys.path.insert(0, '../src/files/')
 import pyrfid
 
 project = u'PyRfid'
-master_doc = 'PyRfid'
+master_doc = 'index'
 author = 'Philipp Meisberger <team@pm-codeworks.de>'
 copyright = '2015-{}, {}'.format(datetime.date.today().year, author)
 version = pyrfid.__version__
